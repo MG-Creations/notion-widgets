@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+	<!-- Font Awesome -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+
+	<!-- Google Font -->
+
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Lato:wght@700&display=swap" rel="stylesheet">
+
+	<!-------->
+
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+			-webkit-box-sizing: border-box;
+			box-sizing: border-box;
+		}
+
+
+		.navMenu {
+			font-family: 'Advent Pro', sans-serif;
+			padding: 8px;
+			text-align: center;
+			margin: 7px auto;
+			width: fit-content;
+		}
+
+		.navMenu a {
+			color: #272727;
+			text-decoration: none;
+			text-transform: uppercase;
+			display: inline-block;
+			padding: 6px;
+		}
+
+		.background {
+			background-color: #ece5f0;
+		}
+
+		.border {
+			border: 1px solid #cccccc;
+
+		}
+
+		.navMenu a:hover {
+
+			color: #d09c0b;
+		}
+	</style>
+</head>
+
+<body>
+
+	<nav class="navMenu  border">
+    <a id="pet_profiles" onclick="navigate(this.id)" href="#"> <i class="fa-solid fa-shield-cat"></i> Pet Profiles</a>
+    <a id="upcoming_appointments" onclick="navigate(this.id)" href="#"> <i class="fa-solid fa-calendar-check"></i> Upcoming Appointments</a>
+		<a id="daily_checklist" onclick="navigate(this.id)" href="#"> <i class="fa-solid fa-list-check"></i> Daily Checklist</a>
+    <a id="important_contacts" onclick="navigate(this.id)" href="#"> <i class="fa-solid fa-address-card"></i> Important Contacts</a>
+    <a id="important_documents" onclick="navigate(this.id)" href="#"> <i class="fa-regular fa-folder-open"></i> Important Documents</a>
+		<a id="expenses" onclick="navigate(this.id)" href="#"> <i class="fa-regular fa-money-bill-1"></i> Expenses</a>
+    <a id="instructions_for_pet_sitter" onclick="navigate(this.id)" href="#"> <i class="fa-solid fa-book"></i> Instructions for Pet Sitter</a>
+
+	</nav>
+
+
+	<script>
+
+		let direction = "horizontal";
+		if (direction === "vertical") {
+			document.head.insertAdjacentHTML("beforeend", `<style>.navMenu a {display: block; text-align:left; margin:7px} i{width:15px; margin-right:5px} .navMenu{margin:3px}</style>`)
+		}
+
+
+		function navigate(id) {
+
+			if (id == 'pet_profiles')
+				window.open("https://www.notion.so/64e8025cc43341a08bf7eed85fbee702?pvs=4", '_parent').focus();
+			else if (id == "upcoming_appointments")
+				window.open("https://www.notion.so/52cbc1dadbe74190b698d756a4e64bee?pvs=4", '_parent').focus();
+			else if (id == "daily_checklist")
+				window.open("https://www.notion.so/Pet-Care-Pro-All-in-One-Pet-Tracker-14828406f26d48e3b80eca7973d2fde5?pvs=4#52b8ae586d1f420ea119299e6e6dcb80", '_parent').focus();
+      else if (id == "important_contacts")
+				window.open("https://www.notion.so/Important-Contacts-5789d6b3db2c4a4c8c85ae4509fcac9f?pvs=4", '_parent').focus();
+			else if (id == "important_documents")
+				window.open("https://www.notion.so/Important-Documents-a7c2a16c72584b6184649b4d7cac01b6?pvs=4", '_parent').focus();
+      else if (id == "expenses")
+				window.open("https://www.notion.so/1007fd10aaa380868959f9ce7da2bd20?pvs=4", '_parent').focus();
+      else if (id == "instructions_for_pet_sitter")
+				window.open("https://www.notion.so/Pet-Care-Pro-All-in-One-Pet-Tracker-14828406f26d48e3b80eca7973d2fde5?pvs=4#1007fd10aaa38079b216e2ced2204389", '_parent').focus();
+		}
+	</script>
+
+
+</body>
+
+</html>
